@@ -1,0 +1,44 @@
+:root{
+    --bg-color:#fc4c02;
+    --light: #ffffff;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.strava{
+    position: absolute;
+    width: 50vmin;
+    aspect-ratio: 1;
+    background: var(--bg-color);
+    border-radius: 20px;
+
+    .top{
+        position: absolute;
+        content: "";
+        aspect-ratio: 1;
+        transform: scaleX(0.5);
+        width: 87%;
+        display: grid;
+        place-items: center;
+        margin-left: 1.4%;
+        background: var(--light);
+        
+        &:before,
+        &:after{
+            position: absolute;
+            content: "";
+            aspect-ratio: 1;
+            transform: rotate(45deg);
+            margin-top: 26%;
+        }
+
+        &:before{
+            width: 64%;
+        }
+    }
+}
